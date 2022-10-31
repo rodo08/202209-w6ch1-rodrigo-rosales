@@ -19,3 +19,5 @@ const taskSlice = createSlice({
     }),
   },
 });
+
+export default taskSlice;
