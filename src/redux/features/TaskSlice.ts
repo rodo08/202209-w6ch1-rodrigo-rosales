@@ -13,9 +13,15 @@ const taskSlice = createSlice({
   name: "tasks",
   initialState: taskInitialState,
   reducers: {
-    addNewTask: (state, action: PayloadAction<types[]>) => ({
+    addNewTask: (state, action: PayloadAction<types[]>): TaskState => ({
       ...state,
-      task: [...action.payload],
+      tasks: [...action.payload],
+    }),
+    removeTask: (state, action: PayloadAction<number>): TaskState => ({
+      ...state,
+      tasks: [
+        ...taskInitialState.tasks.filter((task) => task.id !== action.payload),
+      ],
     }),
   },
 });
