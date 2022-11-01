@@ -5,7 +5,7 @@ interface TaskState {
   tasks: TaskStructure[];
 }
 
-const taskInitialState: TaskState = {
+export const taskInitialState: TaskState = {
   tasks: [],
 };
 
