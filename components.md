@@ -2,28 +2,29 @@
 
 ## Show data
 
-- An array with the list of tasks to do with the properties: id, name and done
-  ##Get actions
-- When the pass to the sate "done" it should be erased
-- When we create a task it's state done is false
+- An array with the list of tasks to do
+- An object "Task" with the following properties: id: number, name: string, done: boolean
 
-## Components
+## Modify Data
 
-##App
+- To load tasks
+- Create New tasks: id: number, name: string, done: boolean
+- Delete Tasks/Update tasks
 
-### Header
+# Components
 
-### Show data
+## App
 
-- An app title "to do list"
-- A form with an "Add task" Button
+### Show Data
 
-## List
+- A To-Do list compnent
+- A form component
 
-### Show data
+## To-Do list
 
-- A list of tasks
-- A button with the "Delete task" text
+### Show Data
+
+- All the tasks to do
 
 ## Form
 
