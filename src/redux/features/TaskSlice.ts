@@ -1,11 +1,11 @@
-import types from "../../types";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import TaskStructure from "../../types";
 
 interface TaskState {
-  tasks: types[];
+  tasks: TaskStructure[];
 }
 
-const taskInitialState: TaskState = {
+export const taskInitialState: TaskState = {
   tasks: [],
 };
 
@@ -13,7 +13,7 @@ const taskSlice = createSlice({
   name: "tasks",
   initialState: taskInitialState,
   reducers: {
-    addNewTask: (state, action: PayloadAction<types[]>): TaskState => ({
+    loadTasks: (state, action: PayloadAction<TaskStructure[]>): TaskState => ({
       ...state,
       tasks: [...action.payload],
     }),
@@ -26,4 +26,8 @@ const taskSlice = createSlice({
   },
 });
 
-export default taskSlice;
+export const taskReducer = taskSlice.reducer;
+export const {
+  loadTasks: loadTasksActionCreator,
+  removeTask: removeTaskActionCreator,
+} = taskSlice.actions;
