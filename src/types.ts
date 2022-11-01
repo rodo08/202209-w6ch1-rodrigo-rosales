@@ -1,7 +1,7 @@
-interface types {
+interface TaskStructure {
   id: number;
   name: string;
   done: boolean;
 }
 
-export default types;
+export default TaskStructure;
