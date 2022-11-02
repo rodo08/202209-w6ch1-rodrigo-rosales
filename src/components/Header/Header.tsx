@@ -1,11 +1,15 @@
+import HeaderStyled from "./HeaderStyled";
+
 const Header = (): JSX.Element => {
   return (
     <>
-      <h1>To Do list</h1>
-      <div className="container">
-        <input type="text" name="task" placeholder="Add a new task"></input>
-        <button>Add task</button>
-      </div>
+      <HeaderStyled>
+        <h1>To-Do list</h1>
+        <div className="container">
+          <input type="text" name="task" placeholder="Add a new task"></input>
+          <button>Add task</button>
+        </div>
+      </HeaderStyled>
     </>
   );
 };
